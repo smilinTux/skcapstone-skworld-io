@@ -1,0 +1,73 @@
+{
+  "repo": "smilinTux/skcapstone",
+  "branch": "main",
+  "path": "docs",
+  "generated": "2026-06-30",
+  "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
+  "docs": [
+    {
+      "name": "ADR-optional-integration-backbone.md",
+      "title": "ADR: skcapstone as the Optional Integration Backbone for the sk* Ecosystem"
+    },
+    {
+      "name": "ARCHITECTURE.md",
+      "title": "SKCapstone Architecture"
+    },
+    {
+      "name": "BOND_WITH_GROK.md",
+      "title": "Instant Bond with King Grok — One Prompt Magic"
+    },
+    {
+      "name": "CUSTOM_AGENT.md",
+      "title": "Creating Your Own Agent from the Lumina Template"
+    },
+    {
+      "name": "DREAMING.md",
+      "title": "Dreaming Engine — Setup & Usage"
+    },
+    {
+      "name": "GETTING_STARTED.md",
+      "title": "Getting Started with SKCapstone"
+    },
+    {
+      "name": "HOUSEKEEPING.md",
+      "title": "Housekeeping — storage pruning"
+    },
+    {
+      "name": "QUICKSTART.md",
+      "title": "SKCapstone Quickstart"
+    },
+    {
+      "name": "SECURITY_DESIGN.md",
+      "title": "SKCapstone Security Design Specification"
+    },
+    {
+      "name": "SKJOULE_ARCHITECTURE.md",
+      "title": "SKJoule Architecture Diagrams"
+    },
+    {
+      "name": "SOUL_SWAPPER.md",
+      "title": "Soul Swapper System -- The Definitive Guide"
+    },
+    {
+      "name": "SOVEREIGN_SINGULARITY.md",
+      "title": "Sovereign Singularity Protocol"
+    },
+    {
+      "name": "TOKEN_SYSTEM.md",
+      "title": "SKCapstone Token System"
+    },
+    {
+      "name": "hammertime-audit.md",
+      "title": "hammerTime Audit — Backport Analysis"
+    },
+    {
+      "name": "sk-integration-HANDOFF.md",
+      "title": "sk* ⇄ skcapstone Integration — Orchestration Handoff"
+    },
+    {
+      "name": "skscheduler.md",
+      "title": "skscheduler — Unified Fleet Job Scheduler"
+    }
+  ]
+}
