@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-06-30",
+  "generated": "2026-07-13",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -12,6 +12,10 @@
     {
       "name": "ARCHITECTURE.md",
       "title": "SKCapstone Architecture"
+    },
+    {
+      "name": "BACKUP.md",
+      "title": "Backup - sovereign state, on a rotation"
     },
     {
       "name": "BOND_WITH_GROK.md",
@@ -58,8 +62,16 @@
       "title": "SKCapstone Token System"
     },
     {
+      "name": "autopilot-coord-scoring.md",
+      "title": "Autopilot coord scoring extension"
+    },
+    {
       "name": "hammertime-audit.md",
       "title": "hammerTime Audit — Backport Analysis"
+    },
+    {
+      "name": "itil-conflict-free-persistence.md",
+      "title": "ITIL Persistence Refactor — Conflict-Free Syncthing Replication"
     },
     {
       "name": "sk-integration-HANDOFF.md",
