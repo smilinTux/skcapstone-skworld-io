@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-07-24",
+  "generated": "2026-07-25",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -36,6 +36,14 @@
     {
       "name": "HOUSEKEEPING.md",
       "title": "Housekeeping — storage pruning"
+    },
+    {
+      "name": "PORTS.md",
+      "title": "SKCapstone daemon status-API ports"
+    },
+    {
+      "name": "POST_RESUME_SELFTEST.md",
+      "title": "Post-Resume Self-Test"
     },
     {
       "name": "QUICKSTART.md",
