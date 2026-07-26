@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-07-25",
+  "generated": "2026-07-26",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -84,6 +84,10 @@
     {
       "name": "itil-conflict-free-persistence.md",
       "title": "ITIL Persistence Refactor — Conflict-Free Syncthing Replication"
+    },
+    {
+      "name": "proactive-triggers.md",
+      "title": "Proactive Trigger Daemon"
     },
     {
       "name": "sk-integration-HANDOFF.md",
