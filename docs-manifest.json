@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-08-06",
+  "generated": "2026-06-30",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -12,14 +12,6 @@
     {
       "name": "ARCHITECTURE.md",
       "title": "SKCapstone Architecture"
-    },
-    {
-      "name": "ATLAS_CONSTITUTION.md",
-      "title": "The Atlas Constitution"
-    },
-    {
-      "name": "BACKUP.md",
-      "title": "Backup - sovereign state, on a rotation"
     },
     {
       "name": "BOND_WITH_GROK.md",
@@ -40,22 +32,6 @@
     {
       "name": "HOUSEKEEPING.md",
       "title": "Housekeeping — storage pruning"
-    },
-    {
-      "name": "OPERATOR_FACET.md",
-      "title": "The Operator Facet: how every subapp plugs into Atlas"
-    },
-    {
-      "name": "OPERATOR_SEAT.md",
-      "title": "Atlas: the SKWorld Operator Seat"
-    },
-    {
-      "name": "PORTS.md",
-      "title": "SKCapstone daemon status-API ports"
-    },
-    {
-      "name": "POST_RESUME_SELFTEST.md",
-      "title": "Post-Resume Self-Test"
     },
     {
       "name": "QUICKSTART.md",
@@ -82,24 +58,8 @@
       "title": "SKCapstone Token System"
     },
     {
-      "name": "TRUSTEE_OPERATIONS.md",
-      "title": "Trustee Operations Manual"
-    },
-    {
-      "name": "autopilot-coord-scoring.md",
-      "title": "Autopilot coord scoring extension"
-    },
-    {
       "name": "hammertime-audit.md",
       "title": "hammerTime Audit — Backport Analysis"
-    },
-    {
-      "name": "itil-conflict-free-persistence.md",
-      "title": "ITIL Persistence Refactor — Conflict-Free Syncthing Replication"
-    },
-    {
-      "name": "proactive-triggers.md",
-      "title": "Proactive Trigger Daemon"
     },
     {
       "name": "sk-integration-HANDOFF.md",

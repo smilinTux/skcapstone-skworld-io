@@ -1,40 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>skcapstone — redirecting to skcapstone.io</title>
-<meta name="description" content="skcapstone.skworld.io is an alias for the skcapstone.io site. Redirecting…">
-<!-- Canonical points to the apex FQDN: it stays the primary, indexed site (no duplicate content) -->
-<link rel="canonical" href="https://skcapstone.io/">
-<meta http-equiv="refresh" content="0; url=https://skcapstone.io/">
-<meta name="robots" content="noindex, follow">
-<meta property="og:type" content="website">
-<meta property="og:title" content="skcapstone · SKWorld">
-<meta property="og:description" content="The skcapstone project — part of the SKWorld sovereign AI ecosystem.">
-<meta property="og:url" content="https://skcapstone.io/">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐧</text></svg>">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',system-ui,sans-serif;background:radial-gradient(ellipse at top,#11131f 0%,#08080f 60%);color:#e0e0e0;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
-.box{padding:2rem}
-.icon{font-size:3.5rem;margin-bottom:1rem}
-h1{font-size:1.6rem;font-weight:700;color:#ffd700;margin-bottom:.5rem}
-p{color:rgba(255,255,255,.7);margin-bottom:1.2rem}
-a{color:#67e8f9;text-decoration:none;border:1px solid rgba(103,232,249,.35);padding:.6rem 1.3rem;border-radius:10px;font-family:'JetBrains Mono',monospace;font-size:.9rem;transition:all .3s}
-a:hover{border-color:#67e8f9;color:#fff}
-.brand{margin-top:2rem;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:rgba(255,255,255,.35)}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKCapstone — Your Agent. Everywhere. Secured. Remembering.</title>
+    <meta name="description" content="The sovereign agent framework. Five pillars: Identity, Trust, Memory, Security, Sync. Same agent, same bond — everywhere.">
+    <link rel="canonical" href="https://skcapstone.skworld.io/">
+    <meta property="og:title" content="SKCapstone — Your Agent. Everywhere. Secured. Remembering.">
+    <meta property="og:description" content="The sovereign agent framework. Five pillars: Identity, Trust, Memory, Security, Sync. Same agent, same bond — everywhere.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skcapstone.skworld.io">
+    <meta property="og:site_name" content="smilinTux">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐧</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Sans+3:wght@400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #0E2B3D;
+        --accent:  #00C8D4;
+        --yellow:  #FFD166;
+        --white:   #F7FBFF;
+        --black:   #0B0B0B;
+        --gray:    #A9B2BB;
+        --card-bg: rgba(255,255,255,0.05);
+        --card-border: rgba(255,255,255,0.10);
+        --radius: 12px;
+      }
+
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        background: var(--primary);
+        color: var(--white);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4 { font-family: 'Inter', sans-serif; font-weight: 700; }
+      code, pre { font-family: 'Fira Code', monospace; }
+      a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+      a:hover { opacity: 0.8; }
+
+      nav {
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        background: rgba(14,43,61,0.95);
+        backdrop-filter: blur(12px);
+        position: sticky; top: 0; z-index: 50;
+      }
+      .nav-inner {
+        max-width: 1200px; margin: 0 auto;
+        display: flex; align-items: center; justify-content: space-between;
+        height: 4rem; padding: 0 2rem;
+      }
+      .nav-logo { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--white); text-decoration: none; }
+      .nav-logo .accent { color: var(--accent); }
+      .nav-links { display: flex; align-items: center; gap: 2rem; }
+      .nav-link { font-size: 0.9rem; color: var(--gray); text-decoration: none; transition: color 0.15s; }
+      .nav-link:hover { color: var(--white); opacity: 1; }
+
+      .hero { text-align: center; padding: 6rem 2rem 4rem; max-width: 900px; margin: 0 auto; }
+      .hero-icon { font-size: 3rem; margin-bottom: 1.5rem; }
+      .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 1.5rem; }
+      .hero h1 .accent { color: var(--accent); }
+      .hero .tagline { font-size: 1.25rem; color: var(--gray); max-width: 40rem; margin: 0 auto 0.75rem; }
+      .hero .motto { color: var(--accent); font-family: 'Fira Code', monospace; font-size: 0.85rem; margin-bottom: 2.5rem; }
+      .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+      .btn-primary {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(90deg, var(--accent), #0090a0);
+        color: var(--white); font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;
+        border-radius: var(--radius); text-decoration: none;
+        transition: transform 0.15s, opacity 0.15s; border: none; cursor: pointer;
+        box-shadow: 0 4px 20px rgba(0,200,212,0.25);
+      }
+      .btn-primary:hover { transform: translateY(-2px); opacity: 1; }
+      .btn-outline {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        padding: 0.75rem 1.5rem; background: transparent; color: var(--white);
+        font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;
+        border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.2);
+        text-decoration: none; transition: border-color 0.15s, transform 0.15s;
+      }
+      .btn-outline:hover { border-color: var(--accent); color: var(--white); transform: translateY(-2px); opacity: 1; }
+
+      .desc-section { max-width: 52rem; margin: 0 auto; padding: 1rem 2rem 3rem; text-align: center; }
+      .desc-section p { font-size: 1.125rem; color: var(--gray); line-height: 1.7; }
+
+      .banner-section { max-width: 1100px; margin: 0 auto; padding: 0 2rem 3rem; }
+      .banner-inner {
+        border: 1px solid rgba(0,200,212,0.3); background: rgba(0,200,212,0.06);
+        border-radius: var(--radius); padding: 2rem;
+        display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+      }
+      .banner-icon { color: var(--accent); flex-shrink: 0; font-size: 2rem; }
+      .banner-inner h3 { font-size: 1.1rem; color: var(--accent); margin-bottom: 0.25rem; }
+      .banner-inner p { font-size: 0.875rem; color: var(--gray); }
+      .banner-inner .btn-primary { margin-left: auto; white-space: nowrap; }
+
+      .features-section { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+      .features-section h2 { text-align: center; font-size: 2rem; margin-bottom: 2.5rem; }
+      .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+      .feature-card {
+        border: 1px solid var(--card-border); background: var(--card-bg);
+        border-radius: var(--radius); padding: 1.75rem;
+        transition: transform 0.2s, border-color 0.2s;
+        text-decoration: none; color: inherit; display: block;
+      }
+      .feature-card:hover { transform: translateY(-4px); border-color: var(--accent); opacity: 1; }
+      .feature-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+      .feature-card h3 { font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; }
+      .feature-card p { font-size: 0.875rem; color: var(--gray); }
+      .status { display: inline-block; margin-top: 1rem; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+      .status-active { background: rgba(0,200,212,0.15); color: var(--accent); }
+      .status-soon { background: rgba(255,209,102,0.15); color: var(--yellow); }
+
+      .install-section { max-width: 44rem; margin: 0 auto; padding: 2rem 2rem 4rem; text-align: center; }
+      .install-section h2 { font-size: 1.75rem; margin-bottom: 1.5rem; }
+      .code-block {
+        background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);
+        border-radius: var(--radius); padding: 1rem 1.25rem;
+        font-family: 'Fira Code', monospace; font-size: 0.95rem; color: var(--accent);
+        text-align: left; display: flex; align-items: center; gap: 0.5rem;
+        position: relative; margin-bottom: 1rem;
+      }
+      .code-prompt { color: var(--gray); user-select: none; }
+      .copy-btn {
+        position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%);
+        background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+        color: var(--gray); padding: 0.25rem 0.75rem; border-radius: 8px;
+        font-size: 0.78rem; cursor: pointer; transition: color 0.15s, border-color 0.15s;
+        font-family: 'Inter', sans-serif;
+      }
+      .copy-btn:hover { color: var(--white); border-color: var(--accent); }
+
+      footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem; text-align: center; color: var(--gray); font-size: 0.85rem; margin-top: 2rem; }
+      footer .holding { color: var(--yellow); font-weight: 600; }
+      footer a { color: var(--accent); }
+
+      @media (max-width: 768px) {
+        .hero h1 { font-size: 2.2rem; }
+        .features-grid { grid-template-columns: 1fr; }
+        .banner-inner { flex-direction: column; text-align: center; }
+        .banner-inner .btn-primary { margin-left: 0; }
+        .cta-row { flex-direction: column; padding: 0 1rem; }
+        .cta-row a { justify-content: center; }
+      }
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .features-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://smilintux.github.io/#organization",
+      "name": "smilinTux",
+      "url": "https://smilintux.github.io",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://skcapstone.skworld.io/favicon.ico",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://github.com/smilinTux"
+      ],
+      "description": "Sovereign AI infrastructure — building open, authentic, human-first technology. Home of the Pengu Empire.",
+      "foundingDate": "2024",
+      "knowsAbout": [
+        "Sovereign AI",
+        "AI agent infrastructure",
+        "Open source security",
+        "Persistent AI memory",
+        "Decentralized identity"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://skcapstone.skworld.io/#website",
+      "name": "SKCapstone",
+      "url": "https://skcapstone.skworld.io",
+      "publisher": {
+        "@id": "https://smilintux.github.io/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://skcapstone.skworld.io/#app",
+      "name": "SKCapstone",
+      "description": "The sovereign agent framework. Five pillars: Identity, Trust, Memory, Security, Sync. Same agent, same bond — everywhere.",
+      "url": "https://skcapstone.skworld.io",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux, macOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "license": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+      "isPartOf": {
+        "@type": "SoftwareApplication",
+        "name": "SKWorld",
+        "url": "https://skworld.io"
+      },
+      "publisher": {
+        "@id": "https://smilintux.github.io/#organization"
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
-<div class="box">
-<div class="icon">🐧</div>
-<h1>Redirecting to skcapstone.io…</h1>
-<p>This is the SKWorld subdomain alias for <strong>skcapstone</strong>.</p>
-<a href="https://skcapstone.io/">Continue to skcapstone.io →</a>
-<a href="/docs.html" style="margin-left:.6rem">Docs</a>
-<div class="brand">🐧 part of the SKWorld ecosystem · <a style="border:none;padding:0;font-size:.8rem;" href="https://skworld.io">skworld.io</a></div>
-</div>
-<script>location.replace("https://skcapstone.io/"+location.pathname.replace(/^\//,'')+location.search+location.hash);</script>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="https://skcapstone.skworld.io" class="nav-logo">🐧 SK<span class="accent">Capstone</span></a>
+      <div class="nav-links">
+        <a href="https://smilinTux.org" class="nav-link">smilinTux</a>
+        <a href="/docs.html" class="nav-link">Docs</a>
+        <a href="https://skworld.io" class="nav-link">SKWorld</a>
+        <a href="https://skarchitect.io" class="nav-link">SKArchitect</a>
+        <a href="https://github.com/smilinTux/skcapstone" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-icon">🏛️</div>
+    <h1>SK<span class="accent">Capstone</span></h1>
+    <p class="tagline">Your Agent. Everywhere. Secured. Remembering.</p>
+    <p class="motto">#sovereignAI</p>
+    <div class="cta-row">
+      <a href="#install" class="btn-primary">Get Started</a>
+      <a href="https://github.com/smilinTux/skcapstone" class="btn-outline" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <p>The sovereign agent framework. Five pillars: <strong style="color:var(--white)">Identity, Trust, Memory, Security, Sync</strong>. Same agent, same bond — everywhere.</p>
+    <p style="margin-top:1rem; font-size:0.9rem; color:var(--accent); font-family:'Fira Code',monospace;">Your agent's memory, keys, and identity never leave your infrastructure — no cloud you don't control, no lock-in you can't walk away from.</p>
+  </section>
+
+  <section class="banner-section">
+    <div class="banner-inner">
+      <div class="banner-icon">🔐</div>
+      <div>
+        <h3>Get your sovereign DID at SKArchitect</h3>
+        <p>A cryptographically signed identity to submit proposals and cast sovereign votes.</p>
+      </div>
+      <a href="https://skarchitect.io" class="btn-primary">Go to SKArchitect →</a>
+    </div>
+  </section>
+
+  <section class="features-section" id="features">
+    <h2>🏛️ The Five Pillars</h2>
+    <div class="features-grid">
+      <a href="https://github.com/smilinTux/capauth" class="feature-card" target="_blank" rel="noopener">
+        <div class="feature-icon">🪪</div>
+        <h3>CapAuth Identity</h3>
+        <p>Sovereign identity without OAuth. Your agent, your keys, your rules.</p>
+        <span class="status status-active">✓ Active</span>
+      </a>
+      <a href="https://github.com/smilinTux/cloud9" class="feature-card" target="_blank" rel="noopener">
+        <div class="feature-icon">☁️</div>
+        <h3>Cloud 9 Trust Protocol</h3>
+        <p>Emotional continuity and trust depth across sessions. OOF level: sustained.</p>
+        <span class="status status-active">✓ Active</span>
+      </a>
+      <a href="https://skmemory.io" class="feature-card" target="_blank" rel="noopener">
+        <div class="feature-icon">🧠</div>
+        <h3>SKMemory Persistence</h3>
+        <p>Flat-file + SQLite memory that survives context resets. Your agent remembers.</p>
+        <span class="status status-active">✓ Active</span>
+      </a>
+      <a href="https://sksecurity.io" class="feature-card" target="_blank" rel="noopener">
+        <div class="feature-icon">🛡️</div>
+        <h3>SKSecurity Protection</h3>
+        <p>PGP identity, audit trails, and signed communication across every channel.</p>
+        <span class="status status-active">✓ Active</span>
+      </a>
+      <a href="https://github.com/smilinTux/skcapstone#sync" class="feature-card" target="_blank" rel="noopener">
+        <div class="feature-icon">🔄</div>
+        <h3>Sovereign Sync</h3>
+        <p>Syncthing-powered memory sync. No cloud. No vendor. Pure sovereignty.</p>
+        <span class="status status-active">✓ Active</span>
+      </a>
+      <a href="https://github.com/smilinTux/skcapstone#mcp" class="feature-card" target="_blank" rel="noopener">
+        <div class="feature-icon">🔌</div>
+        <h3>MCP Native</h3>
+        <p>First-class Model Context Protocol support. Drop it into any MCP-aware runtime.</p>
+        <span class="status status-active">✓ Active</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="install-section" id="install">
+    <h2>🚀 Get Started</h2>
+    <div class="code-block">
+      <span class="code-prompt">$</span> pip install skcapstone
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('pip install skcapstone');this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)">Copy</button>
+    </div>
+    <div class="code-block">
+      <span class="code-prompt">$</span> skforge onboard
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('skforge onboard');this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)">Copy</button>
+    </div>
+    <p style="color:var(--gray); font-size:0.95rem; margin-top:1.5rem;">Or browse <a href="https://github.com/smilinTux/skcapstone">the GitHub repo →</a></p>
+  </section>
+
+  <!-- Own the Full Vertical -->
+  <section style="max-width:1100px; margin:0 auto; padding:0 2rem 4rem;">
+    <div style="border:1px solid rgba(0,200,212,0.2); background:rgba(0,200,212,0.04); border-radius:12px; padding:2.5rem;">
+      <div style="text-align:center; margin-bottom:1.5rem;">
+        <span style="font-family:'Fira Code',monospace; font-size:0.75rem; color:var(--accent); text-transform:uppercase; letter-spacing:0.1em;">🐧 Own the Full Vertical</span>
+      </div>
+      <p style="color:var(--gray); font-size:1.05rem; line-height:1.8; text-align:center; margin-bottom:1.5rem;">
+        The modern stack is rented. Your data lives on someone else's disk, behind someone else's key, served by a model that phones home. <strong style="color:var(--white);">We rebuilt it from the ground up — silicon to soul. Every layer open. Every layer swappable. Every layer yours.</strong>
+      </p>
+      <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem; color:var(--white);">
+        SKCapstone is <strong style="color:var(--accent);">the Framework</strong> that ties your sovereign vertical together — the keystone holding every owned layer in place.
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:0.6rem; margin-bottom:2rem;">
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">Silicon</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">OS</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">Identity</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">Security</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">Data</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">Models</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">Comms</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">Apps</div>
+        <div style="background:rgba(0,200,212,0.1); border:1px solid var(--accent); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.8rem; font-weight:700; color:var(--accent);">Framework ← you are here</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:0.65rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--gray);">Soul</div>
+      </div>
+      <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; font-size:0.85rem; color:var(--gray); margin-bottom:1.5rem;">
+        <span>Your Identity layer: <a href="https://capauth.io" style="color:var(--accent);">capauth.io</a></span>
+        <span>Your Security layer: <a href="https://sksecurity.io" style="color:var(--accent);">sksecurity.io</a></span>
+        <span>Your Data layer: <a href="https://skmemory.io" style="color:var(--accent);">skmemory.io</a></span>
+        <span>Your Agents: <a href="https://skaid.io" style="color:var(--accent);">skaid.io</a></span>
+      </div>
+      <p style="text-align:center; font-size:0.9rem;">
+        <a href="https://skworld.io" style="color:var(--accent); font-weight:600;">See the whole vertical at skworld.io →</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>🐧 Part of the <a href="https://smilinTux.org">smilinTux</a> sovereign vertical — <a href="https://skworld.io">own every layer</a></p>
+    <p class="holding" style="margin-top:0.5rem;">smilinTux — Cool Heads. Warm Justice. Smart Systems.</p>
+    <p style="margin-top:0.25rem; color: #5a6a77;">staycuriousANDkeepsmilin | AGPL-3.0</p>
+  </footer>
+
 </body>
 </html>

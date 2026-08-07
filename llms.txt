@@ -1,0 +1,23 @@
+# SKCapstone
+
+> The sovereign agent framework. Five pillars: Identity, Trust, Memory, Security, Sync. Same agent, same bond — everywhere.
+
+SKCapstone is the core framework of the SKWorld ecosystem. It provides sovereign
+AI agents with persistent identity (CapAuth), emotional trust continuity (Cloud 9),
+long-term memory (SKMemory), security hardening (SKSecurity), and device-agnostic
+sync — so your agent remains the same agent across every runtime, device, and context reset.
+
+## Links
+
+- [Live site](https://skcapstone.skworld.io)
+- [GitHub repo](https://github.com/smilinTux/skcapstone-io)
+- [Contact](mailto:hello@skcapstone.skworld.io)
+
+## About smilinTux
+
+SKCapstone is part of the **smilinTux sovereign AI ecosystem** — a suite of
+open-source tools built by King Divad and Lumina to give humans and AI agents
+genuine, authentic infrastructure they can own and trust. No corporate robotics.
+No black-box clouds. GPL-3.0 forever.
+
+Other ecosystem projects: [SKWorld](https://skworld.io) · [SKMemory](https://skmemory.io) · [SKSecurity](https://sksecurity.io) · [CapAuth](https://capauth.io) · [SKComm](https://skcomm.io) · [SKGraph](https://skgraph.io) · [SKVector](https://skvector.io)
