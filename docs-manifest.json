@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-08-16",
+  "generated": "2026-08-17",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -62,6 +62,10 @@
       "title": "SKCapstone Quickstart"
     },
     {
+      "name": "RELEASING.md",
+      "title": "Releasing: how a version actually gets cut"
+    },
+    {
       "name": "SECURITY_DESIGN.md",
       "title": "SKCapstone Security Design Specification"
     },
@@ -100,6 +104,10 @@
     {
       "name": "proactive-triggers.md",
       "title": "Proactive Trigger Daemon"
+    },
+    {
+      "name": "projection-read-inventory.md",
+      "title": "Projection Read Inventory (card A5.1)"
     },
     {
       "name": "sk-integration-HANDOFF.md",
