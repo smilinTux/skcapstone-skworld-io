@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-08-20",
+  "generated": "2026-08-21",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -14,8 +14,16 @@
       "title": "SKCapstone Architecture"
     },
     {
+      "name": "ATLAS_ACTION_LEDGER.md",
+      "title": "ATLAS action-ledger custody"
+    },
+    {
       "name": "ATLAS_CONSTITUTION.md",
       "title": "The Atlas Constitution"
+    },
+    {
+      "name": "ATLAS_EXECUTION_SAFETY.md",
+      "title": "Atlas execution safety contract"
     },
     {
       "name": "BACKUP.md",
@@ -40,6 +48,10 @@
     {
       "name": "HOUSEKEEPING.md",
       "title": "Housekeeping — storage pruning"
+    },
+    {
+      "name": "MCP_TOPOLOGY.md",
+      "title": "SK MCP topology"
     },
     {
       "name": "OPERATOR_FACET.md",
@@ -88,6 +100,10 @@
     {
       "name": "TRUSTEE_OPERATIONS.md",
       "title": "Trustee Operations Manual"
+    },
+    {
+      "name": "atlas-observation-contract.md",
+      "title": "ATLAS observation and adapter contract"
     },
     {
       "name": "autopilot-coord-scoring.md",
