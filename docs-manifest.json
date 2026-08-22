@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-08-21",
+  "generated": "2026-08-22",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -50,6 +50,10 @@
       "title": "Housekeeping — storage pruning"
     },
     {
+      "name": "LIGHTWEIGHT_AGENTS.md",
+      "title": "Lightweight Fleet Agents"
+    },
+    {
       "name": "MCP_TOPOLOGY.md",
       "title": "SK MCP topology"
     },
@@ -68,6 +72,10 @@
     {
       "name": "POST_RESUME_SELFTEST.md",
       "title": "Post-Resume Self-Test"
+    },
+    {
+      "name": "QUALIFICATION.md",
+      "title": "Qualification evidence"
     },
     {
       "name": "QUICKSTART.md",
