@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-09-08",
+  "generated": "2026-09-09",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -130,6 +130,10 @@
       "title": "Autopilot coord scoring extension"
     },
     {
+      "name": "ci-throughput.md",
+      "title": "Governed CI throughput"
+    },
+    {
       "name": "hammertime-audit.md",
       "title": "hammerTime Audit — Backport Analysis"
     },
@@ -148,6 +152,10 @@
     {
       "name": "sk-integration-HANDOFF.md",
       "title": "sk* ⇄ skcapstone Integration — Orchestration Handoff"
+    },
+    {
+      "name": "skrsi-runtime-handoffs.md",
+      "title": "SKRSI runtime handoffs"
     },
     {
       "name": "skscheduler.md",
