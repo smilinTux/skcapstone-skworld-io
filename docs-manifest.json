@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-09-16",
+  "generated": "2026-09-17",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -36,6 +36,10 @@
     {
       "name": "CMDB_SCHEDULED_RECONCILE.md",
       "title": "Scheduled CMDB reconciliation"
+    },
+    {
+      "name": "COORD_DAG_DESIGN.md",
+      "title": "COORD DAG: Design and Rollout Plan"
     },
     {
       "name": "CUSTOM_AGENT.md",
