@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SKCapstone Architecture",
+    "subtitle": "Sovereign agent runtime: CLI/MCP, the consciousness daemon, identity, memory, transport and messaging. Derived from docs/ARCHITECTURE.md in smilinTux/skcapstone.",
+    "output": "skcapstone.architecture.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    { "id": "cli", "type": "frontend", "label": "skcapstone CLI", "sublabel": "operator entrypoint", "pos": [40, 260], "size": [180, 70] },
+    { "id": "mcp", "type": "frontend", "label": "MCP Server", "sublabel": "mcp_tools/, 80+ tools", "pos": [40, 420], "size": [180, 70] },
+    { "id": "identity", "type": "security", "label": "CapAuth Identity", "sublabel": "PGP keys + DID tiers", "pos": [350, 80], "size": [180, 70] },
+    { "id": "daemon", "type": "backend", "label": "Agent Daemon", "sublabel": "consciousness loop", "pos": [350, 330], "size": [180, 70] },
+    { "id": "llm_cloud", "type": "external", "label": "Cloud LLMs", "sublabel": "grok, kimi, nvidia + more", "pos": [350, 560], "size": [180, 70] },
+    { "id": "llm_local", "type": "external", "label": "Local Ollama", "sublabel": "llama3.2, devstral", "pos": [350, 700], "size": [180, 70] },
+    { "id": "comms", "type": "messagebus", "label": "SKComms Transport", "sublabel": "encrypted .skc.json envelopes", "pos": [690, 180], "size": [190, 70] },
+    { "id": "chat", "type": "backend", "label": "SKChat Messaging", "sublabel": "threads, inbox polling", "pos": [690, 340], "size": [190, 70] },
+    { "id": "memory", "type": "database", "label": "SKMemory", "sublabel": "short/mid/long-term + SQLite index", "pos": [690, 500], "size": [190, 70] },
+    { "id": "coord", "type": "database", "label": "Coordination Board", "sublabel": "Syncthing-synced JSON", "pos": [690, 660], "size": [190, 70] },
+    { "id": "syncthing", "type": "external", "label": "Syncthing Mesh", "sublabel": "P2P encrypted sync", "pos": [980, 120], "size": [180, 70] },
+    { "id": "file_transport", "type": "external", "label": "File Transport", "sublabel": "local file drops (fallback)", "pos": [980, 260], "size": [180, 70] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "SKCapstone Agent", "wraps": ["cli", "mcp", "daemon"] },
+    { "kind": "security-group", "label": "Identity Layer", "wraps": ["identity"] }
+  ],
+  "connections": [
+    { "id": "cli-daemon", "from": "cli", "to": "daemon", "label": "invokes", "variant": "default" },
+    { "id": "mcp-daemon", "from": "mcp", "to": "daemon", "label": "invokes", "variant": "default" },
+    { "id": "daemon-identity", "from": "daemon", "to": "identity", "label": "signs / verifies envelopes", "variant": "security" },
+    { "id": "daemon-comms", "from": "daemon", "to": "comms", "label": "sends / receives", "variant": "default" },
+    { "id": "daemon-chat", "from": "daemon", "to": "chat", "label": "routes responses", "variant": "default" },
+    { "id": "daemon-memory", "from": "daemon", "to": "memory", "label": "persists state", "variant": "default" },
+    { "id": "daemon-coord", "from": "daemon", "to": "coord", "label": "coordination board r/w", "variant": "default" },
+    { "id": "daemon-llmcloud", "from": "daemon", "to": "llm_cloud", "label": "primary + fallback tiers", "variant": "dashed" },
+    { "id": "daemon-llmlocal", "from": "daemon", "to": "llm_local", "label": "local tier", "variant": "dashed" },
+    { "id": "chat-comms", "from": "chat", "to": "comms", "label": "delivers via", "variant": "default" },
+    { "id": "comms-syncthing", "from": "comms", "to": "syncthing", "label": "P2P envelope sync", "variant": "dashed" },
+    { "id": "comms-file", "from": "comms", "to": "file_transport", "label": "fallback transport", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Source", "items": ["Derived from the System Architecture Overview and Component Diagram mermaid graphs in docs/ARCHITECTURE.md (smilinTux/skcapstone)", "Never contradicts that mermaid; this view abstracts daemon internals (poll/health/sync/housekeeping loops) into the single Agent Daemon node"] }
+  ]
+}
