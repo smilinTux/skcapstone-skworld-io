@@ -11,6 +11,7 @@ sync — so your agent remains the same agent across every runtime, device, and 
 
 - [Live site](https://skcapstone.skworld.io)
 - [GitHub repo](https://github.com/smilinTux/skcapstone-io)
+- [Architecture diagram](https://skcapstone.skworld.io/diagrams/skcapstone.architecture.html)
 - [Contact](mailto:hello@skcapstone.skworld.io)
 
 ## About smilinTux
