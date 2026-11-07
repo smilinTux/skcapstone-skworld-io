@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-11-06",
+  "generated": "2026-11-07",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -148,10 +148,6 @@
     {
       "name": "itil-conflict-free-persistence.md",
       "title": "Current coordination write boundary"
-    },
-    {
-      "name": "proactive-triggers.md",
-      "title": "Proactive Trigger Daemon"
     },
     {
       "name": "projection-read-inventory.md",
