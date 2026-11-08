@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-11-07",
+  "generated": "2026-11-08",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -36,6 +36,10 @@
     {
       "name": "CMDB_SCHEDULED_RECONCILE.md",
       "title": "Scheduled CMDB reconciliation"
+    },
+    {
+      "name": "COORD_AGENT_GUIDE.md",
+      "title": "Coordination guide for agents (coord board)"
     },
     {
       "name": "COORD_DAG_DESIGN.md",
@@ -148,6 +152,10 @@
     {
       "name": "itil-conflict-free-persistence.md",
       "title": "Current coordination write boundary"
+    },
+    {
+      "name": "presence-loop.md",
+      "title": "PRES-6: proactive presence loop"
     },
     {
       "name": "projection-read-inventory.md",
