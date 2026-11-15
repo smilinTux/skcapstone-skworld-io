@@ -2,7 +2,7 @@
   "repo": "smilinTux/skcapstone",
   "branch": "main",
   "path": "docs",
-  "generated": "2026-11-14",
+  "generated": "2026-11-15",
   "note": "Committed fallback for the /docs viewer when the GitHub Contents API is unavailable or rate-limited. Regenerate from: python docs-manifest-gen.py smilinTux/skcapstone --out docs-manifest.json",
   "docs": [
     {
@@ -48,6 +48,10 @@
     {
       "name": "CUSTOM_AGENT.md",
       "title": "Creating Your Own Agent from the Lumina Template"
+    },
+    {
+      "name": "DEPLOY.md",
+      "title": "Deploying: production runs released main"
     },
     {
       "name": "DREAMING.md",
